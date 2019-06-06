@@ -11,10 +11,6 @@ import Combine
 
 struct ContentView : View {
 
-    struct ViewModel {
-        var subHeader = "Hello Other World"
-    }
-
     class ViewStore: BindableObject {
         var didChange = PassthroughSubject<ViewStore, Never>()
 
@@ -66,7 +62,6 @@ struct ContentView : View {
         }
     }
 
-    @State var viewModel = ViewModel()
     @EnvironmentObject var store: ViewStore
 
     var body: some View {
